@@ -1,0 +1,6 @@
+# Documentation: https://roots.io/trellis/docs/mail/
+mail_smtp_server: smtp.tigercubmedia.com:587
+mail_admin: admin@tigercubmedia.com
+mail_hostname: tigercubmedia.com
+mail_user: socrates
+mail_password: "{{ vault_mail_password }}" # Define this variable in group_vars/all/vault.yml
