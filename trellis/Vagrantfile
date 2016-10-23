@@ -154,11 +154,11 @@ def post_up_message
   msg = 'Your Trellis Vagrant box is ready to use!'
   msg << "\n* Composer and WP-CLI commands need to be run on the virtual machine."
   msg << "\n* You can SSH into the machine with `vagrant ssh`."
-  msg << "\n* Then navigate to your WordPress sites at `/srv/www`."
+  msg << "\n* Then navigate to your WordPress sites at `/var/www`."
 
   msg
 end
 
 def remote_site_path(site_name, site)
-  "/srv/www/#{site_name}/#{site['current_path'] || 'current'}"
+  "/var/www/#{site_name}/#{site['current_path'] || 'current'}"
 end

@@ -6,10 +6,12 @@ wordpress_sites:
   tigercubmedia.com:
     site_hosts:
       - canonical: tigercubmedia.dev
+        redirects:
+          - www.tigercubmedia.dev
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@tigercubmedia.dev
     admin_user: socrates
-    site_title: "Tiger Cub Media"
+    admin_email: loriezn@gmail.com
+    site_title: Tiger Cub Media
     multisite:
       enabled: false
     ssl:

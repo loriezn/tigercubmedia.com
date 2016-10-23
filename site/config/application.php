@@ -21,16 +21,20 @@ if (file_exists($root_dir . '/.env')) {
 }
 
 /**
- * Set up our global environment constant and load its config first
- * Default: development
+ * Stage Switcher
  */
+
 $envs = [
   'development' => 'http://tigercubmedia.dev',
-  'staging'     => 'http://staging.tigercubmedia.com',
-  'production'  => 'http://tigercubmedia.com'
+  'staging'     => 'https://staging.tigercubmedia.com',
+  'production'  => 'https://tigercubmedia.com'
 ];
 define('ENVIRONMENTS', serialize($envs));
 
+/**
+ * Set up our global environment constant and load its config first
+ * Default: development
+ */
 define('WP_ENV', env('WP_ENV') ?: 'development');
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';

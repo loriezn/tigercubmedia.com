@@ -40,9 +40,7 @@
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/soil": "3.7.1",
-    "roots/wp-stage-switcher": "2.0.0",
-    "league/commonmark": "0.13.*",
-    "roots/markdown-on-save": "^2.0"
+    "roots/wp-stage-switcher": "2.0.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
@@ -53,11 +51,11 @@
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-    "wordpress-install-dir": "web/wp"
+    "wordpress-install-dir": "web/tcm"
   },
   "scripts": {
     "test": [
-      "vendor/bin/phpcs --ignore=web/wp/,vendor/ -n -s ."
+      "vendor/bin/phpcs --ignore=web/tcm/,vendor/ -n -s ."
     ]
   }
 }

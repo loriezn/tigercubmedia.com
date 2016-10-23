@@ -23,8 +23,8 @@ server {
 
   {% if item.value.multisite.enabled | default(false) -%}
     {% if item.value.multisite.subdomains | default(false) -%}
-      rewrite ^/(wp-.*.php)$ /wp/$1 last;
-      rewrite ^/(wp-(content|admin|includes).*) /wp/$1 last;
+      rewrite ^/(wp-.*.php)$ /tcm/$1 last;
+      rewrite ^/(wp-(content|admin|includes).*) /tcm/$1 last;
     {%- else -%}
       include wordpress_multisite_subdirectories.conf;
     {%- endif %}

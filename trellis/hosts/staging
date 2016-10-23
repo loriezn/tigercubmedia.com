@@ -1,8 +1,8 @@
 # Add each host to the [staging] group and to a "type" group such as [web] or [db].
 # List each machine only once per [group], even if it will host multiple sites.
 
-[epsilon]
-14.202.176.121:170
+[staging]
+14.202.176.121	ansible_port=160
 
 [web]
-14.202.176.121:170
+14.202.176.121	ansible_port=160
